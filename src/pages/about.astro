@@ -1,21 +1,36 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Acerca de ... ";
 
+const identity = {
+    firstName : "Luis",
+    Country: "Mexico",
+    Occupation: "Trabajador Freelance",
+    hobbies: ["Programacion","Watch series"],
+};
+const skills = ["HTML","CSS","JavaScript","Astro","Redaccion de Documentos" ];
+
+//variable con estilo
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase"
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <a href="/">Inicio</a>
-        <a href="/about/">Sobre mi</a>
-        <a href="/blog/">Blog</a>
-		<h1>Mi Sitio Web Astro</h1>
-		<h1>Acerca de Astro</h1>
+<BaseLayout pageTitle={pageTitle}>
+    <h1>Mi Sitio Web Astro</h1>
+		<h1>{pageTitle}</h1>
         <p>Estoy trabajando con el framwork Astro</p>
-	</body>
-</html>
+        <p>He aqui algunos datos sobre mi : </p>
+        <ul>
+            <li>Me llamo {identity.firstName}</li>
+            <li>Vivo en {identity.Country} y trabajo como {identity.Occupation}</li>
+            <li>Algunas de mis Aficiones son : {identity.hobbies}</li>
+            
+        </ul>
+        <p>A algunas Tecnologias y lenguajes que manejo son : </p>
+        <ul>
+            {skills.map((skill)=> <li class="skill">{skill}</li> )}
+        </ul>
+  </BaseLayout>
+	
+		
+   
