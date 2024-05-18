@@ -1,26 +1,37 @@
 html {
-    background-color: #f1f5f9;
+    
     font-family: sans-serif;
+  
   }
   
   body {
     margin: 0 auto;
     width: 100%;
-    max-width: 80ch;
+    max-width: 80vh;
+    height: 100vh;
     padding: 1rem;
     line-height: 1.5;
-    background-color: #ffffff;
+    background-color: #3F51B5; /* Azul */
+    background-image: linear-gradient(to top, #3F51B5 0%, #C39BD3 100%);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border-color: purple;
   }
   
   * {
     box-sizing: border-box;
   }
-  
+  li{
+    color: azure;
+  }
   h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
+    color:  #4c1d95;
   }
-  
+  p{
+    color: azure;
+  }
   /* estilos de la barra de navegación*/
   
   .nav-links {
@@ -61,6 +72,7 @@ html {
     }
   
     .nav-links a {
+        text-align: center;
       display: inline-block;
       padding: 15px 20px;
     }
@@ -81,4 +93,3 @@ html {
   }
   }
  
-
